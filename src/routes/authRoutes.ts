@@ -2,6 +2,7 @@
 import { Router, Request, Response } from 'express'
 import { register, login, getMe, registerAdmin } from '../controllers/authController'
 import { authenticate } from '../middleware/auth';
+import { authenticateAdmin } from '../middleware/isAdmin';
 
 const router = Router()
 
@@ -13,6 +14,6 @@ router.get("/me", authenticate, getMe);//http://localhost:3000/api/v1/auth/me
 
 ////protected route(Admin only)
 //need create middleware for role based authorization
-router.post("/admin/register",authenticate, registerAdmin);//http://localhost:3000/api/v1/auth/admin/register
+router.post("/admin/register",authenticateAdmin, registerAdmin);//http://localhost:3000/api/v1/auth/admin/register
 
 export default router
