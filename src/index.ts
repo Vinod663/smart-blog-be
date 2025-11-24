@@ -23,6 +23,10 @@ app.use(cors({
 app.use('/api/v1/auth', authRoutes)
 app.use('/api/v1/post', postRoutes)
 
+app.get("/", (req, res) => {
+    res.send("Smart Blog Backend is running...")
+})
+
 
 //then--> successful connection
 //catch--> error in connection
