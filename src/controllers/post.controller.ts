@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import cloudinary from '../config/cloudinary';
-import { upload } from '../middleware/upload';
+// import { upload } from '../middleware/upload';
 import { Post } from '../models/Post';
 import { AuthRequest } from '../middleware/auth';
 

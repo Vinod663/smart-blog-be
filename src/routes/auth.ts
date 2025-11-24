@@ -1,10 +1,10 @@
 
 //Use for connect auth routes to main app and define auth endpoints
 
-import {Request, Response, Router } from "express";
-import { login, register, getMe, registerAdmin } from "../controllers/auth.controller";
+// import {Request, Response, Router } from "express";
+// import { login, register, getMe, registerAdmin } from "../controllers/auth.controller";
 
-export const router = Router();
+// export const router = Router();
 
 
 // router.post("/api/v1/auth/register", (req: Request, res: Response) => {//http://localhost:3000/api/v1/auth/register

@@ -16,7 +16,7 @@ app.use(express.json())
 
 
 app.use(cors({
-    origin: ['http://localhost:5173', 'http://localhost:5175'],           
+    origin: ['http://localhost:5173', 'http://localhost:5175','https://smart-blog-fe-psi.vercel.app'],           
     methods: ['GET', 'POST', 'PUT', 'DELETE'],  
 }))  
 
@@ -25,7 +25,7 @@ app.use('/api/v1/post', postRoutes)
 
 app.get("/", (req, res) => {
     res.send("Smart Blog Backend is running...")
-})
+})//Test route
 
 
 //then--> successful connection
