@@ -2,7 +2,7 @@
 //Use for connect auth routes to main app and define auth endpoints
 
 import {Request, Response, Router } from "express";
-import { login, register, getMe, registerAdmin } from "../controllers/authController";
+import { login, register, getMe, registerAdmin } from "../controllers/auth.controller";
 
 export const router = Router();
 

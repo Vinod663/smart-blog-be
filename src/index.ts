@@ -1,7 +1,8 @@
 //1
 import express from 'express'                   
 import cors from 'cors'     
-import authRoutes from './routes/authRoutes' 
+import authRoutes from './routes/auth.routes' 
+import postRoutes from './routes/post.routes'
 import dotenv from 'dotenv' 
 import mongoose from 'mongoose'
 dotenv.config()   
@@ -20,6 +21,7 @@ app.use(cors({
 }))  
 
 app.use('/api/v1/auth', authRoutes)
+app.use('/api/v1/post', postRoutes)
 
 
 //then--> successful connection
@@ -39,3 +41,6 @@ mongoose.connect(MONGO_URI)
 app.listen(SERVER_PORT, () => {
   console.log("Server is running on port " + SERVER_PORT)
 })
+
+
+
