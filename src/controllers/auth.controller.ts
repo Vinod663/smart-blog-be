@@ -199,7 +199,7 @@ export const handleRefreshToken = async(req: Request, res: Response) => {
         const accessToken = signAccessToken(user);
         res.status(200).json({
             accessToken
-         })
+        })
 
         //generate new access token
 

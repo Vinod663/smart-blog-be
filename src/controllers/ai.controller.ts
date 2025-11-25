@@ -20,7 +20,7 @@ export const generateAIContent = async (req: Request, res: Response) => {
             {
                 headers: {
                     'Content-Type': 'application/json',
-                    'X-goog-api-key': 'AIzaSyCYpGU4ylWqsyYFnsR7pqBbirE6z9HHDec'
+                    'X-goog-api-key': process.env.GOOGLE_API_KEY as string
                 }
             }
         )
